@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+  
+<head>
+    <title>Food Details Page</title>
+      
+    <style type="text/css" media="screen">
+        body {
+            background-color: skyblue;
+            text-decoration-color: white;
+            font-size:14px; 
+        }
+        table tr td{
+            border:2px black solid;
+            
+        }
+        table{
+            border-collapse: collapse;
+        }
+    </style>
+</head>
+  
+<body>
+    <div class="data">
+        <h4>Food Trucks</h4>
+        <table>
+            <tr>
+                <td>Applicant</td>
+                <td>Facility Type</td>
+                <td>Address</td>
+                <td>Food Items</td>
+            </tr>
+            <% foodDetails.forEach(function(val) { %>
+                <tr>
+                <td><%= val.applicant %></td>
+                <td><%= val.facilitytype %></td>
+                <td><%= val.address %></td>
+                <td><%= val.fooditems %></td>
+                </tr>
+            <% }); %>
+            
+    </div>
+    <script>
+        console.log("Data")
+    </script>
+</body>
+  
+</html> 
